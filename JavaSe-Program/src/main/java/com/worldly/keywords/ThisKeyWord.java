@@ -17,7 +17,7 @@ public class ThisKeyWord extends Dog{
     public ThisKeyWord(String name){
       super(); //因为 不带参的构造函数调用了带参的构造函数，所以可以不传参也可以实现由参构造函数
       this.name =name;   //调用类中的属性和表示当前对象
-        
+
     }
 
     public static void  main(String [] args){
