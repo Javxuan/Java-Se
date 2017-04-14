@@ -3,6 +3,9 @@ package com.worldly.thread;
 /**
  * 线程创建的第2种方式
  *
+ *  implements Runable 接口  并 实现 run()方法
+ *  日常推荐使用。
+ *
  * @author Worldly
  * @create 2017-04-14 15:10
  **/

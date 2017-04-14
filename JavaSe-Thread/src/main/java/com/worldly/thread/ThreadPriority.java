@@ -6,7 +6,7 @@ package com.worldly.thread;
  * @author Worldly
  * @create 2017-04-14 16:38
  **/
-public class ThreadPriorityTest {
+public class ThreadPriority {
 
     public static void main(String []args){
         //showNormal();
