@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JavaSe-Program" />
+        <module name="JavaSe-Grammar" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JavaSe-Program" target="1.5" />
+      <module name="JavaSe-Grammar" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
