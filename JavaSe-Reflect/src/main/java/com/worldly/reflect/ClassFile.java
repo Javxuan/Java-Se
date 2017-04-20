@@ -6,6 +6,7 @@ package com.worldly.reflect;
  *   1.类经过编译后都生成了.class文件 每个.class文件都有一个Class对象
  *   2.类加载器会把.class文件加载到jvm 内存
  *   3.jvm只会生成一个字节码，但是jvm可以用这份字节码来创建多个对象。
+ *   4.字节码在内存中只存在一份，并且以Class对象存在的
  *
  * @author Worldly
  * @create 2017-04-17 15:53

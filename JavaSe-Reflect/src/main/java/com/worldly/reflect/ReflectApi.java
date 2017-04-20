@@ -35,20 +35,36 @@ public class ReflectApi {
 
             /**
              * 取得该类的所有方法
+             * 方法为公共的
              */
             Method [] methods = cls.getMethods();
 
             /**
+             * 取得改类声明的方法
+             * 包括 私有，默认，保护，公共
+             * 不包括父类extends的方法
+             * Method对象里面包含了方法的一些信息 相当于 Class对象 包含了某个类的一些信息一样
+             */
+            Method[] methods2 = cls.getDeclaredMethods();
+
+            /**
              * 取得该类的所有属性
+             *  公共的字段
+             *  Field对象里面包含了属性的一些信息
              */
             Field [] fields = cls.getFields();
+
+            /**
+             * 获取声明的属性
+             */
+            Field[] filds = cls.getDeclaredFields();
 
 
             /**
              * 通过反射来实例化对象、
              * 不带参的可以直接使用 cls.newInstance();
              * 取得指定参数类型的构造方法
-             *
+             * Constructor对象包含了构造方法的一些信息。
              */
             try {
                 Constructor<?> cons = cls.getConstructor(String.class,int.class);
@@ -73,6 +89,9 @@ public class ReflectApi {
                 Method getMet = cls.getMethod("get"+initcap(attribute));
 
                 // 等价于：Person对象.setName("张三")
+                /**
+                 * invoke(Object obj,Object orgs) 表示调用obj里面的方法 ，参数为orgs
+                 */
                 setMet.invoke(obj,"张三");
 
                 // 等价于：Person对象.getName()
@@ -82,8 +101,19 @@ public class ReflectApi {
                 e.printStackTrace();
             }
 
-
-
+            /**
+             * 调用私有的方法
+             *   name表示方法名， parameterTypes表示 参数类型没有就为空
+             */
+            try {
+                Object obj = cls.newInstance();
+                Method  privateMethod = cls.getDeclaredMethod("hello",null);
+                //忽略检查访问修饰符,设成可以访问的
+                privateMethod.setAccessible(true);
+                privateMethod.invoke(obj);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
 
         } catch (ClassNotFoundException e) {
@@ -115,7 +145,11 @@ class Person{
     }
 
     public void say(){
-        System.out.println("hello reflect");
+        System.out.println("调用 公用的方法");
+    }
+
+    private void hello(){
+        System.out.println("调用private 方法，要把修饰检验关闭，然后再调用");
     }
 
     public void setName(String name){
