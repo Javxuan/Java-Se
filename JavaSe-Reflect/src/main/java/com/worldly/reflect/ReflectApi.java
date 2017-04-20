@@ -43,12 +43,14 @@ public class ReflectApi {
              * 取得改类声明的方法
              * 包括 私有，默认，保护，公共
              * 不包括父类extends的方法
+             * Method对象里面包含了方法的一些信息 相当于 Class对象 包含了某个类的一些信息一样
              */
             Method[] methods2 = cls.getDeclaredMethods();
 
             /**
              * 取得该类的所有属性
              *  公共的字段
+             *  Field对象里面包含了属性的一些信息
              */
             Field [] fields = cls.getFields();
 
@@ -62,7 +64,7 @@ public class ReflectApi {
              * 通过反射来实例化对象、
              * 不带参的可以直接使用 cls.newInstance();
              * 取得指定参数类型的构造方法
-             *
+             * Constructor对象包含了构造方法的一些信息。
              */
             try {
                 Constructor<?> cons = cls.getConstructor(String.class,int.class);
