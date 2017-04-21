@@ -18,7 +18,7 @@ import java.util.List;
  * 2.通过工厂对象 --------》生成解析器对象 DcumentBuilder
  * 3.通过解析器的parse()方法
  * 4.然后通过一些 api来获取 Node, 元素节点 ，文本节点。
- * 
+ *
  * @author Worldly
  * @create 2017-04-20 15:00
  **/
