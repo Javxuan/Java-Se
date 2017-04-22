@@ -5,7 +5,6 @@ import org.jdom.Document;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 import org.jdom.output.XMLOutputter;
-import org.w3c.dom.Element;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -20,10 +19,10 @@ import java.util.List;
  * @author Worldly
  * @create 2017-04-22 8:42
  **/
-public class JdomParseXml {
+public class JdomParseCreateXml {
 
     public static void main(String []args){
-        JdomParseXml jpx = new JdomParseXml();
+        JdomParseCreateXml jpx = new JdomParseCreateXml();
         File file = new File("book.xml");
         List<Book> books = jpx.jdomParseXml(file);
         for(Book book :books){
