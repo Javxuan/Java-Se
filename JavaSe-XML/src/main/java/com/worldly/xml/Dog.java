@@ -7,15 +7,33 @@ package com.worldly.xml;
  * @create 2017-04-20 20:31
  **/
 public class Dog {
+    private int id;
     private String name;
     private int age;
+
+    public Dog(){}
+
+    public Dog(int id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
 
     @Override
     public String toString() {
         return "Dog{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
