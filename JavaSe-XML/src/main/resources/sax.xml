@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><books>
+<book id="Think first java">
+<name>Think first java</name>
+<price>88.0</price>
+<book id="设计模式">
+<name>设计模式</name>
+<price>88.0</price>
+</books>
