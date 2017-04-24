@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dogs>
+    <dog id="001">
+        <name>小灰</name>
+        <age>1</age>
+    </dog>
+    <dog id="002">
+        <name>大黄</name>
+        <age>10</age>
+    </dog>
+</dogs>
