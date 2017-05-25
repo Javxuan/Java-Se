@@ -6,7 +6,7 @@ package com.worldly.keywords;
  *    1.1 如果有case则　从该case 往下 走直至 break 或者是跑完。
  *  2.如果没有符合要求的 case
  *    2.1.则 按顺序由上往下执行 直至break 或者是结束。
- *  
+ *
  * @author xiaoqixuan
  * @create 2017/5/24 15:43
  */
